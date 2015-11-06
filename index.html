@@ -32,11 +32,21 @@
             background: #eee;
             height: 100px;
             margin-top: 100px;
-            text-align: center;
+            text-align: left;
+        }
+        .wrapper .email{
+            text-transform: uppercase;
+            color: #0082c3;
+            bottom: 5px;
+            position: absolute;
+            left: 40%;
+            font-size: 0.5rem;
+            color: #0082c3;
         }
         .wrapper .logo2{
             position: absolute;
-            bottom: 10px;
+            bottom: 30px;
+            left:40%;
         }
         .wrapper header{
             background: #0082c3;
@@ -48,6 +58,50 @@
             text-decoration: none;
             font-family: sans-serif;
             color:#0082c3;
+        }
+        .btn{
+            display: inline-block;
+            color: white;
+            text-transform: capitalize;
+            text-decoration: none;
+            width: 32%;
+            padding: 20px;
+            font-size: 27px;
+            font-family: sans-serif;
+            text-align: center;
+            box-shadow: 1px 1px 1px 1px #ccc;
+        }
+        .fb-btn{
+            background: #4e69a2;
+        }
+        .email-btn{
+            background: linear-gradient(to bottom,#3f6dc9 100%,#3054b8 100%);
+        }
+        .social{
+            margin-top: 50px;
+            text-align: center;
+        }
+        #content{
+            height: 300px;
+            position: relative;
+            overflow-y: auto;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+        #tip-author{
+            top: 23px;
+            position: relative;
+            text-align: center;
+            height: 450px;
+            width: auto;
+        }
+
+        #tip-author legend{
+            text-align: right;
+        }
+        .author-name{
+            position: relative;
         }
     </style>
 </head>
@@ -61,13 +115,28 @@
             <fieldset>
                 <legend><h1 class="title">Developer Tip</h1></legend>
                 <div id="content" contenteditable="true">
-                    ffffff
+                    The Electron framework lets you write cross-platform desktop applications using JavaScript, HTML and CSS.
+                    It is based on Node.js and Chromium
                 </div>
             </fieldset>
+            <div id="tip-author">
+                <fieldset>
+                    <legend><h1 class="title">Tip By</h1></legend>
+                    <img src="who.jpg" height="200px" width="300px" class="author" alt="Sandeep">
+                    <h1 class="author-name"> Sandeep Patel</h1>
+                </fieldset>
+            </div>
+            <div class="social">
+                <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
+                    Facebook
+                </a>
+                <a alt="email" class="btn email-btn" href="mailto:IDCDeveloperCommunity@intuit.com">Email</a>
+            </div>
         </div>
+
         <footer class="footer">
             <img src="intuitgrey.png" class="logo2" alt="Intuit">
-            <a class="email" href="mailto:IDCDeveloperCommunity@intuit.com">IDCDeveloperCommunity</a>
+            <a class="email" href="mailto:IDCDeveloperCommunity@intuit.com">IDC Developer Community</a>
         </footer>
     </div>
 </body>

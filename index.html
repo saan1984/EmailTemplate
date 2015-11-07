@@ -3,13 +3,30 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
+        body{
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        .circle{
+            height: 15px;
+            width: 15px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .red{
+            background: rgb(192,57,43);
+        }
+        .yellow{
+            background: rgb(239,164,44);
+        }
+        .green{
+            background: rgb(40,174,97);
+        }
         .wrapper{
-            width: 1024px;
             border: 1px solid lightgrey;
             margin: auto;
         }
         .wrapper .title{
-            font-family: cursive;
+            font-family: inherit;
         }
         .wrapper .tip{
             width: 90%;
@@ -17,11 +34,10 @@
             margin-top: 100px;
         }
         .wrapper fieldset{
-            height: 400px;
             color: #0082c3;
-            border: 4px solid #0082c3;
+            border: 2px solid #eee;
         }
-        legend h1{
+        legend h3{
             background: #0082c3;
             color: white;
             padding: 10px;
@@ -50,14 +66,14 @@
             left:40%;
         }
         .wrapper header{
-            background: #0082c3;
+            background-color: #0082c3;
         }
        .wrapper .logo1{
             margin-left: 20px;
         }
         .email{
             text-decoration: none;
-            font-family: sans-serif;
+            font-family: inherit;
             color:#0082c3;
         }
         .btn{
@@ -68,7 +84,7 @@
             width: 32%;
             padding: 20px;
             font-size: 27px;
-            font-family: sans-serif;
+            font-family: inherit;
             text-align: center;
             box-shadow: 1px 1px 1px 1px #ccc;
         }
@@ -79,60 +95,63 @@
             background: linear-gradient(to bottom,#3f6dc9 100%,#3054b8 100%);
         }
         .social{
-            margin-top: 50px;
-            text-align: center;
+            text-align: left;
         }
         #content{
             height: 300px;
             position: relative;
             overflow-y: auto;
-            font-family: Verdana, Geneva, sans-serif;
+            font-family: inherit;
             font-size: 20px;
             color: black;
         }
-        #tip-author{
-            top: 23px;
-            position: relative;
-            text-align: center;
-            height: 450px;
-            width: auto;
-        }
-
         #tip-author legend{
             text-align: right;
         }
-        .author-name{
-            position: relative;
+        .author-detail{
+            color:grey;
         }
     </style>
 </head>
 <body>
     <div class="wrapper" >
         <header>
+            <div class="circle"></div>
             <img src="community.png" class="logo1" alt="IDC Developer Community">
         </header>
 
         <div class="tip">
             <fieldset>
-                <legend><h1 class="title">Developer Tip</h1></legend>
+                <legend><h3 class="title">Developer Tip</h3></legend>
+                <img src="tip-image.png" alt="tip image">
                 <div id="content" contenteditable="true">
                     The Electron framework lets you write cross-platform desktop applications using JavaScript, HTML and CSS.
-                    It is based on Node.js and Chromium
+                    It is based on Node.js and Chromium.Client side frameworks like Angular.js or React.js can also be used
+                    with Electron to leverage Single page application to become a desktop application.Electron make it possible
+                    to achieve performance like a desktop application and rich UI like web application.The platforms supported by Electrons are OS X,Linux and Windows.
+                    Some of the popular applications developed using Electron are Atom editor,Microsoft Visual Studio Code and Slack.
+                    <ol>
+                        <li>Home Page : <a href="http://electron.atom.io/">http://electron.atom.io</a></li>
+                        <li>Github Repo: <a href="https://github.com/atom/electron">https://github.com/atom/electron</a></li>
+                        <li>Useful Resources: <a href="https://github.com/sindresorhus/awesome-electron">https://github.com/sindresorhus/awesome-electron</a></li>
+                    </ol>
+                </div>
+                <div class="social">
+                    <h4 class="title">Contact us:-</h4>
+                    <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
+                        Facebook
+                    </a>
+                    <a alt="email" class="btn email-btn" href="mailto:IDCDeveloperCommunity@intuit.com">Email</a>
+                </div>
+                <div id="tip-author">
+                    <h4 class="title">Tip by:-</h4>
+                    <img src="who.jpg" height="100px" class="author" alt="Sandeep">
+                    <div class="author-detail">
+                        <strong>Name: </strong>Sandeep Patel <br/>
+                        <strong>Email: </strong>sandeepkumar_patel@intuit.com
+                    </div>
                 </div>
             </fieldset>
-            <div id="tip-author">
-                <fieldset>
-                    <legend><h1 class="title">Tip By</h1></legend>
-                    <img src="who.jpg" height="200px" width="300px" class="author" alt="Sandeep">
-                    <h1 class="author-name"> Sandeep Patel</h1>
-                </fieldset>
-            </div>
-            <div class="social">
-                <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
-                    Facebook
-                </a>
-                <a alt="email" class="btn email-btn" href="mailto:IDCDeveloperCommunity@intuit.com">Email</a>
-            </div>
         </div>
 
         <footer class="footer">

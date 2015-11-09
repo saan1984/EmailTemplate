@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=viewport-width,initial-scale=1">
     <style>
+
         body{
             font-family: Verdana, Geneva, sans-serif;
         }
@@ -70,8 +71,8 @@
             color: white;
             text-transform: capitalize;
             text-decoration: none;
-            width: 25%;
-            padding: 20px;
+            min-width: 150px;
+            padding: 10px;
             font-size: 27px;
             font-family: inherit;
             text-align: center;
@@ -103,6 +104,10 @@
         ol li strong{
             color:grey;
         }
+        .tip-image{
+            width: 100%;
+            max-width: 400px;
+        }
     </style>
 </head>
 <body>
@@ -115,7 +120,7 @@
         <div class="tip">
             <fieldset>
                 <legend><h3 class="title">Developer Tip</h3></legend>
-                <img src="tip-image.png" alt="tip image">
+                <img src="tip-image.png" class="tip-image" alt="tip image">
                 <p id="content" contenteditable="false">
                     The Electron framework lets you write cross-platform desktop applications using JavaScript, HTML and CSS.
                     It is based on Node.js and Chromium.Client side frameworks like Angular.js or React.js can also be used

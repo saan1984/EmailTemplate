@@ -11,6 +11,7 @@
             border: 0;
             font-size: 100%;
             vertical-align: baseline;
+            overflow: hidden;
         }
         .circle{
             height: 15px;
@@ -19,15 +20,16 @@
             display: inline-block;
         }
         .wrapper{
-            margin: auto;
             background: #fff;
+            width: 100%;
+            overflow: hidden;
         }
         .wrapper .title{
             font-family: inherit;
         }
         .wrapper .tip{
+            overflow: hidden;
             width: 100%;
-            margin: auto;
         }
         .wrapper fieldset{
             color: #0082c3;
@@ -63,6 +65,9 @@
         }
         .wrapper .header{
             background-color: #0082c3;
+            top:0px;
+            left: 0px;
+            overflow: hidden;
         }
        .wrapper .logo1{
             margin-left: 20px;
@@ -127,12 +132,12 @@
 </head>
 <body>
     <div class="wrapper" >
-        <div class="header">
-            <div class="circle"></div>
-            <img src="community.png" class="logo1" alt="IDC Developer Community">
-        </div>
 
         <div class="tip">
+            <div class="header">
+                <div class="circle"></div>
+                <img src="community.png" class="logo1" alt="IDC Developer Community">
+            </div>
             <fieldset>
                 <legend><h3 class="title">Developer Tip</h3></legend>
                 <img src="tip-image.png" class="tip-image" alt="tip image">

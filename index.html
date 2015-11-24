@@ -6,6 +6,11 @@
 
         body{
             font-family: Verdana, Geneva, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
         }
         .circle{
             height: 15px;
@@ -29,11 +34,12 @@
             border: 2px solid #888;
             margin: 20px 20px;
             background: #eee;
+            padding: 0px;
         }
         legend h3{
             background: #0082c3;
             color: white;
-            padding: 10px;
+            padding: 10px;;
         }
         .wrapper .footer{
             position: relative;
@@ -73,7 +79,7 @@
             text-decoration: none;
             min-width: 150px;
             padding: 10px;
-            font-size: 27px;
+            font-size: 16px;
             font-family: inherit;
             text-align: center;
             box-shadow: 1px 1px 1px 1px #ccc;
@@ -86,11 +92,16 @@
         }
         .social{
             text-align: left;
+            margin-left: 15px;
         }
         #content{
             position: relative;
             font-family: inherit;
             color: #2F4F4F;
+            margin-left: 15px;
+        }
+        #tip-author{
+            margin-left: 15px;
         }
         #tip-author legend{
             text-align: right;
@@ -108,6 +119,13 @@
             width: 100%;
             max-width: 400px;
         }
+        h4.title{
+            margin-left: 15px;
+        }
+        .tip fieldset legend{
+            margin-left: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -133,13 +151,6 @@
                         <li><strong>Useful Resources: </strong><a href="https://github.com/sindresorhus/awesome-electron">https://github.com/sindresorhus/awesome-electron</a></li>
                     </ol>
                 </p>
-                <div class="social">
-                    <h4 class="title">Contact us:-</h4>
-                    <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
-                        Facebook
-                    </a>
-                    <a alt="email" class="btn email-btn" href="mailto:IDCDeveloperCommunity@intuit.com">Email</a>
-                </div>
                 <div id="tip-author">
                     <h4 class="title">Tip by:-</h4>
                     <img src="who.jpg" height="100px" class="author" alt="Sandeep">
@@ -148,11 +159,19 @@
                         <strong>Email: </strong>sandeepkumar_patel@intuit.com
                     </div>
                 </div>
+                <div class="social">
+                    <h6 class="title">Contact us:-</h6>
+                    <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
+                        Facebook
+                    </a>
+                    <a alt="email" class="btn email-btn" href="mailto:IDC_DevCommunity@intuit.com">Email</a>
+                </div>
+                <div class="footer">
+                    <img src="intuitgrey.png" class="logo2" alt="Intuit"><br/>
+                    <a class="email" href="mailto:IDC_DevCommunity@intuit.com">IDC Developer Community</a>
+                </div>
             </fieldset>
-        </div>
-        <div class="footer">
-            <img src="intuitgrey.png" class="logo2" alt="Intuit"><br/>
-            <a class="email" href="mailto:IDCDeveloperCommunity@intuit.com">IDC Developer Community</a>
+
         </div>
     </div>
 </body>

@@ -15,7 +15,6 @@
             border: 0;
             font-size: 100%;
             vertical-align: baseline;
-            overflow: hidden;
         }
         .circle{
             height: 15px;
@@ -53,6 +52,8 @@
             background: #ddd;
             height: 60px;
             margin-top: 20px;
+            float: left;
+            width: 100%;
             text-align: center;
         }
         .wrapper .email{
@@ -115,6 +116,7 @@
             font-family: inherit;
             color: #2F4F4F;
             margin-left: 15px;
+            font-weight:bold;
         }
         #tip-author{
             margin-left: 15px;
@@ -127,6 +129,7 @@
         }
 
         ol li {
+
             color:grey;
             height: 150px;
             width: 450px;
@@ -151,6 +154,31 @@
         .sub-content{
             margin-bottom:45px;
         }
+        ul.social{
+            float:left;
+            width: 100%;
+        }
+        ul.social li{
+            float: left;
+            display: inline-block;
+            min-width: 50%;
+            height: 165px;
+            width: 250px;
+        }
+        img.reward{
+            width:100px;
+            text-align: center;
+
+        }
+        .text-center{
+            text-align:center;
+        }
+        .winner{
+            color:orange;
+        }
+        .question strong{
+            color:green;
+        }
     </style>
 </head>
 <body>
@@ -168,9 +196,10 @@
              </h1>
             <p class="content">
                 CES, also known as the Consumer Electronics Show, is an internationally renowned electronics and technology trade show, attracting major companies and industry professionals worldwide. The annual show is held each January at the Las Vegas Convention Center in Las Vegas, Nevada, United States.
+                Here comes the first tech challenge to test your knowledge on CES 2016.
             </p>
             <p class="sub-content">
-                Here comes the first tech challenge to test your knowledge on CES 2016.
+                Guess these innovative and cool gadgets which were showcased in CES 2016. Take the hint and guess gadget!
             </p>
             <ol>
                 <li class="question">
@@ -194,20 +223,25 @@
                     <span><strong>Hint:</strong> Personal Theatre</span>
                 </li>
             </ol>
-            <div class="social">
-                <h6 class="title">Reply your answers in following email:-</h6>
-                <a alt="email" class="btn email-btn"
-                   href="mailto:IDC_DevCommunity@intuit.com">
-                    IDC_DevCommunity@intuit.com
-                </a>
-            </div>
+            <ul class="social">
+                <li class="social-li">
+                    <h6 class="title">Email your answers to:-</h6>
+                    <a alt="email" class="btn email-btn"
+                       href="mailto:IDC_DevCommunity@intuit.com">
+                        IDC_DevCommunity@intuit.com
+                    </a>
+                </li>
+                <li class="social-li text-center">
+                    <h6><span class="winner">Winners</span> will be <span class="winner">announced</span> in the next <span class="winner">Quiz</span>.</h6>
+                    <img src="mysteryprize.png" class="reward" alt="reward">
+                </li>
+            </ul>
             <div class="footer">
                 <img src="intuitgrey.png" class="logo2" alt="Intuit"><br/>
                 <a class="email" href="mailto:IDC_DevCommunity@intuit.com">
                     IDC Developer Community</a>
             </div>
         </fieldset>
-
     </div>
 </div>
 </body>

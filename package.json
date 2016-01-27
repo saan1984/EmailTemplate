@@ -1,0 +1,25 @@
+{
+  "name": "email-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saan1984/EmailTemplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saan1984/EmailTemplate/issues"
+  },
+  "homepage": "https://github.com/saan1984/EmailTemplate#readme",
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-animate": "1.4.9",
+    "angular-aria": "1.4.9",
+    "angular-material": "1.0.2"
+  }
+}

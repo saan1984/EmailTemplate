@@ -1,0 +1,19 @@
+{
+  "name": "EmailTemplate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/saan1984/EmailTemplate",
+  "authors": [
+    "spatel10 <sandeepkumar_patel@intuit.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs-imageupload-directive": "*"
+  }
+}

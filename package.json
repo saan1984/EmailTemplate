@@ -20,6 +20,7 @@
     "angular": "1.4.9",
     "angular-animate": "1.4.9",
     "angular-aria": "1.4.9",
-    "angular-material": "1.0.2"
+    "angular-material": "1.0.2",
+    "clipboard-js": "0.2.0"
   }
 }

@@ -28,14 +28,15 @@
             display: inline-block;
         }
         md-sidenav{
-            background: slategray;
+            background: royalblue;
         }
         .wrapper .title{
             font-family: inherit;
         }
-        .wrapper .tip{
+        .wrapper .tipper{
             overflow: hidden;
             width: 100%;
+            background: royalblue;
         }
         .wrapper fieldset{
             border: 2px solid #888;
@@ -44,7 +45,7 @@
             padding: 10px;
         }
         legend h3{
-            background: #0082c3;
+            background: royalblue;
             color: white;
             padding: 10px;;
         }
@@ -70,7 +71,7 @@
             bottom: 20px;
         }
         .wrapper .header{
-            background-color: #0082c3;
+            background-color: royalblue;
             top:0px;
             left: 0px;
             overflow: hidden;
@@ -135,8 +136,21 @@
         .text-area{
             min-height: 150px;
         }
+        #result{
+            margin-top: 40px;
+        }
         md-sidenav{
+            background: #ffffff;
             width: 100%;
+        }
+        md-toolbar.tools-container{
+            background: #ffffff;
+        }
+        md-sidenav.right-side{
+            background: royalblue;
+        }
+        md-sidenav.right-side md-toolbar{
+            background: royalblue;
         }
     </style>
 </head>
@@ -144,11 +158,11 @@
 <md-sidenav md-is-locked-open="$mdMedia('gt-md')"
             class="md-sidenav-left md-whiteframe-z2 md-whiteframe-24dp" md-component-id="left" >
     <div class="wrapper" >
-        <div class="tip">
+        <div class="tipper">
                 <div class="circle"></div>
                 <img class="logo1" alt="IDC Developer Community"
                      ng-src="http://saan1984.github.io/EmailTemplate/generator/community.png">
-            </md-toolbar>
+            </div>
             <fieldset>
                 <legend><h3 class="title">Developer Tip</h3></legend>
                 <div class="content">
@@ -160,17 +174,14 @@
                     <h3>Tip description:</h3>
                     <textarea rows="5"  ng-model="textArea"></textarea>
                     <h3>Useful Link: </h3>
-
                     <md-input-container>
                         <label>Enter a URL</label>
                         <input type="url" ng-model="url1">
                     </md-input-container>
-
                     <md-input-container>
                         <label>Enter a URL</label>
                         <input type="url" ng-model="url2">
                     </md-input-container>
-
                 </div>
                 <div class="tip-author">
                     <h4 class="title">Tip by:</h4>
@@ -197,16 +208,13 @@
 </md-sidenav>
 
 <md-content  flex>
-    <md-toolbar layout="row" md-scroll-shrink>
+    <md-toolbar layout="row"  class="tools-container" md-scroll-shrink>
         <div layout="row" layout-align="center center" >
             <md-button class="md-fab md-warn md-hue-2" ng-click="createNewTip()">
                 New
             </md-button>
             <md-button class="md-fab md-warn md-hue-2" ng-click="generate()">
                 Out
-            </md-button>
-            <md-button class="md-fab md-accent md-hue-2" ng-click="makeCopy()">
-                Copy
             </md-button>
         </div>
     </md-toolbar>
@@ -229,7 +237,7 @@
                                 <img  class="tip-image"
                                       ng-src="{{image1.resized.dataURL}}" />
                                 <h3>Description: </h3>
-                                <div class="text-area">  {{textArea}}</div>
+                                <div class="text-area">{{textArea}}</div>
                                 <h3>Useful Link: </h3>
                                 <ol>
                                     <li><a href="{{url1}}">{{url1}}</a></li>
@@ -258,26 +266,26 @@
                                 </a>
                             </div>
                             <div class="footer">
-                                <img class="logo2" height="auto" alt="Intuit" ng-src="http://saan1984.github.io/EmailTemplate/generator/intuitgrey.png">
+                                <img class="logo2" height="auto" alt="Intuit"
+                                     ng-src="http://saan1984.github.io/EmailTemplate/generator/intuitgrey.png">
                                 <br/>
                                 <a class="email" href="mailto:IDC_DevCommunity@intuit.com">
                                     IDC Developer Community</a>
                             </div>
                         </fieldset>
-
                     </div>
                 </md-content>
             </div>
         </div>
     </md-content>
 </md-content>
-
-
-
-   <md-sidenav md-is-locked-open="$mdMedia('gt-md')"
-               class="md-sidenav-right md-whiteframe-z2 md-whiteframe-24dp" md-component-id="right">
+   <md-sidenav
+               class="md-sidenav-right right-side md-whiteframe-24dp" md-component-id="right">
        <md-toolbar >
            <h1 class="md-margin" >Generated HTML</h1>
+           <md-button class="md-fab md-accent md-hue-2" ng-click="makeCopy()">
+               Copy
+           </md-button>
        </md-toolbar>
        <textarea id="result" ng-model="result" rows="25" class="layout-margin"></textarea>
     </md-sidenav>

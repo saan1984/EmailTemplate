@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=viewport-width,initial-scale=1">
+    <meta property="og:title" content="Developer Tip" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="community.png" />
+    <meta property="article:author" content="community.png" />
+    <meta property="og:url" content="https://www.facebook.com/groups/idcdevcommunity/" />
+    <style>
+        body{
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+        .circle{
+            height: 15px;
+            width: 15px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .wrapper{
+            background: #fff;
+            width: 100%;
+            overflow: hidden;
+        }
+        .wrapper .title{
+            font-family: inherit;
+        }
+        .wrapper .tip{
+            overflow: hidden;
+            width: 100%;
+        }
+        .wrapper fieldset{
+            color: #0082c3;
+            border: 2px solid #888;
+            margin: 20px 20px;
+            background: #eee;
+            padding: 0px;
+        }
+        legend h3{
+            background: #0082c3;
+            color: white;
+            padding: 10px;;
+        }
+        .wrapper .footer{
+            position: relative;
+            bottom: 0px;
+            background: #ddd;
+            height: 60px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .wrapper .email{
+            text-transform: uppercase;
+            color: #0082c3;
+            bottom: 5px;
+            position: absolute;
+            font-size: 0.5rem;
+            color: #0082c3;
+        }
+        .wrapper .logo2{
+            position: absolute;
+            bottom: 20px;
+        }
+        .wrapper .header{
+            background-color: #0082c3;
+            top:0px;
+            left: 0px;
+            width: 100%;
+        }
+       .wrapper .logo1{
+            margin-left: 20px;
+        }
+        .email{
+            text-decoration: none;
+            font-family: inherit;
+            color:#0082c3;
+        }
+        .btn{
+            display: inline-block;
+            color: white;
+            text-transform: capitalize;
+            text-decoration: none;
+            min-width: 150px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            text-align: center;
+            box-shadow: 1px 1px 1px 1px #ccc;
+        }
+        .fb-btn{
+            background: #4e69a2;
+        }
+        .email-btn{
+            background: #3054b8;
+        }
+        .social{
+            text-align: left;
+
+        }
+        #content{
+            position: relative;
+            font-family: inherit;
+            color: #2F4F4F;
+            margin-left: 15px;
+        }
+        #tip-author legend{
+            text-align: right;
+        }
+        .author-detail{
+            color:grey;
+        }
+        ol{
+            list-style-type: none;
+        }
+        ol li strong{
+            color:grey;
+        }
+        .tip-image{
+            max-width: 400px;
+            margin: 10px 0px;
+        }
+        .tip fieldset legend{
+            margin-left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper" >
+
+        <div class="tip">
+            <div class="header">
+                <div class="circle"></div>
+                <img src="community.png" class="logo1" alt="IDC Developer Community">
+            </div>
+            <fieldset>
+                <legend><h3 class="title">Developer Tip</h3></legend>
+
+                <div id="content">
+                   <p>
+                       Careful while working with big numbers in javascript. By default all numbers in javascript are floating point (sign * mantissa * 2^exponent where mantissa is 53bits).
+                       Hence the max integer supported in JS is 2^53-1 = 9007199254740992.
+                   </p>
+                    <p>
+                        <strong>Example: Twitter JSON:</strong>
+                        <code><pre>
+{ id: 10765432100123456789,id_str : "10765432100123456789", ...}
+id in Twitter are 64 bit long .
+> parseInt("10765432100123456789")
+10765432100123458000
+</pre></code>
+                        <p>As you can see above the precision is lost with large numbers.
+                        Languages like C/C++/Java supports 64bit unsigned integers.</p>
+                    </p>
+                <h4 class="title">Useful Link:-</h4>
+                <ol>
+                        <li><a href="https://github.com/alexbardas/bignumber.js">
+                            https://github.com/alexbardas/bignumber.js
+                        </a></li>
+                        <li><a href="https://github.com/peterolson/BigInteger.js">
+                            https://github.com/peterolson/BigInteger.js</a></li>
+                    </ol>
+
+                <div id="tip-author">
+                    <h4 class="title">Tip by:-</h4>
+                    <br>
+                    <div class="author-detail">
+                        <strong>Name: </strong>khan, saquib<br/>
+                        <strong>Email: </strong>saquib_khan@intuit.com
+                    </div>
+                </div>
+                <div class="social">
+                    <h6 class="title">Contact us:-</h6>
+                    <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
+                        Facebook
+                    </a>
+                    <a alt="email" class="btn email-btn" href="mailto:IDC_DevCommunity@intuit.com">Email</a>
+                </div>
+
+                </div>
+                <div class="footer">
+                    <img src="intuitgrey.png" class="logo2" alt="Intuit"><br/>
+                    <a class="email" href="mailto:IDC_DevCommunity@intuit.com">
+                        IDC Developer Community</a>
+                </div>
+            </fieldset>
+
+        </div>
+    </div>
+</body>
+</html>

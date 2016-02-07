@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=viewport-width,initial-scale=1">
+    <meta property="og:title" content="Developer Tip" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="community.png" />
+    <meta property="article:author" content="community.png" />
+    <meta property="og:url" content="https://www.facebook.com/groups/idcdevcommunity/" />
+    <style>
+        body{
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+        .circle{
+            height: 15px;
+            width: 15px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .wrapper{
+            background: #fff;
+            width: 100%;
+            overflow: hidden;
+        }
+        .wrapper .title{
+            font-family: inherit;
+        }
+        .wrapper .tip{
+            overflow: hidden;
+            width: 100%;
+        }
+        .wrapper fieldset{
+            color: #0082c3;
+            border: 2px solid #888;
+            margin: 20px 20px;
+            background: #eee;
+            padding: 0px;
+        }
+        legend h3{
+            background: #0082c3;
+            color: white;
+            padding: 10px;;
+        }
+        .wrapper .footer{
+            position: relative;
+            bottom: 0px;
+            background: #ddd;
+            height: 60px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .wrapper .email{
+            text-transform: uppercase;
+            color: #0082c3;
+            bottom: 5px;
+            position: absolute;
+            font-size: 0.5rem;
+            color: #0082c3;
+        }
+        .wrapper .logo2{
+            position: absolute;
+            bottom: 20px;
+        }
+        .wrapper .header{
+            background-color: #0082c3;
+            top:0px;
+            left: 0px;
+            width: 100%;
+        }
+       .wrapper .logo1{
+            margin-left: 20px;
+        }
+        .email{
+            text-decoration: none;
+            font-family: inherit;
+            color:#0082c3;
+        }
+        .btn{
+            display: inline-block;
+            color: white;
+            text-transform: capitalize;
+            text-decoration: none;
+            min-width: 150px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            text-align: center;
+            box-shadow: 1px 1px 1px 1px #ccc;
+        }
+        .fb-btn{
+            background: #4e69a2;
+        }
+        .email-btn{
+            background: #3054b8;
+        }
+        .social{
+            text-align: left;
+
+        }
+        #content{
+            position: relative;
+            font-family: inherit;
+            color: #2F4F4F;
+            margin-left: 15px;
+        }
+        #tip-author legend{
+            text-align: right;
+        }
+        .author-detail{
+            color:grey;
+        }
+        ol{
+            list-style-type: none;
+        }
+        ol li strong{
+            color:grey;
+        }
+        .tip-image{
+            max-width: 400px;
+            margin: 10px 0px;
+        }
+        .tip fieldset legend{
+            margin-left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper" >
+
+        <div class="tip">
+            <div class="header">
+                <div class="circle"></div>
+                <img src="community.png" class="logo1" alt="IDC Developer Community">
+            </div>
+            <fieldset>
+                <legend><h3 class="title">Developer Tip</h3></legend>
+
+                <div id="content">
+
+                   <p>
+                       <strong>Clickjacking</strong>, also known as a "UI redress attack", is an attack vector where multiple transparent or opaque layers are used to trick a user into clicking on a button or link on different page than visually seen by the user. Thus, the attacker is "hijacking" clicks meant for your page and routing them to another page for various reasons.
+                   </p>
+                    <p>
+                        <p>Using a similar technique, keystrokes can also be hijacked. With a carefully crafted combination of stylesheets, iframes, and text boxes, a user can be led to believe they are typing in the password to their email or bank account, but are instead typing into an invisible frame controlled by the attacker.</p>
+                    </p>
+                    <p>Clickjacking is a product of clever UI modifications using your site's content in an iframe. So in order to defeat the attack vector you must not allow your site to be used inside an iframe except in a manner you specify.
+                        Browser vendors, fortunately being fully aware of the dangers of this, have implemented X-Frame-Options and Content-Security-Policy headers, which can be used to prevent framing the website.</p>
+                <h4 class="title">Useful Link:-</h4>
+                <ol>
+                        <li><a href="https://www.owasp.org/index.php/Clickjacking">
+                            https://www.owasp.org/index.php/Clickjacking
+                        </a></li>
+                        <li><a href="http://javascript.info/tutorial/clickjacking">
+                            http://javascript.info/tutorial/clickjacking</a></li>
+                    </ol>
+                <div id="tip-author">
+                    <h4 class="title">Tip by:-</h4>
+                    <br>
+                    <div class="author-detail">
+                        <strong>Name: </strong>N M, Prashanthakumara<br/>
+                        <strong>Email: </strong>Prashanthakumara_NM@intuit.com
+                    </div>
+                </div>
+                <div class="social">
+                    <h6 class="title">Contact us:-</h6>
+                    <a alt="Dev Community Facebook Page" class="btn fb-btn" href="https://www.facebook.com/groups/idcdevcommunity/">
+                        Facebook
+                    </a>
+                    <a alt="email" class="btn email-btn" href="mailto:IDC_DevCommunity@intuit.com">
+                        Email
+                    </a>
+                </div>
+
+                </div>
+                <div class="footer">
+                    <img src="intuitgrey.png" class="logo2" alt="Intuit"><br/>
+                    <a class="email" href="mailto:IDC_DevCommunity@intuit.com">
+                        IDC Developer Community</a>
+                </div>
+            </fieldset>
+
+        </div>
+    </div>
+</body>
+</html>
